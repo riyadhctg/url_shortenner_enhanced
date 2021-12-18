@@ -19,7 +19,7 @@ var store = NewURLStore()
 func main() {
 	http.HandleFunc("/", Redirect)
 	http.HandleFunc("/add", Add)
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":4000", nil)
 }
 
 func Redirect(w http.ResponseWriter, r *http.Request) {

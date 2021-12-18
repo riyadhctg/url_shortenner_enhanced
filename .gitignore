@@ -7,6 +7,10 @@
 
 # Test binary, built with `go test -c`
 *.test
+infrastructure/.terraform/
+infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfstate
+infrastructure/terraform.tfstate.backup
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
