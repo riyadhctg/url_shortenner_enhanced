@@ -7,7 +7,6 @@ WORKDIR /app/go-url-shortenner
 
 # We want to populate the module cache based on the go.{mod,sum} files.
 COPY go.mod .
-#COPY app/go.sum .
 
 RUN go mod download
 
@@ -17,7 +16,7 @@ COPY . .
 RUN go build -o ./out/go-url-shortenner .
 
 
-# This container exposes port 8080 to the outside world
+# This container exposes port 4000 to the outside world
 EXPOSE 4000
 
 # Run the binary program produced by `go install`
