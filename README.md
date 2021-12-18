@@ -1,7 +1,7 @@
 # URL Shortenner in GO
 
-Ref: https://www.educative.io/courses/the-way-to-go
-IaC (terraform) taken from https://github.com/KevinSeghetti/aws-terraform-ecs 
+* Ref: https://www.educative.io/courses/the-way-to-go
+* IaC (terraform) taken from https://github.com/KevinSeghetti/aws-terraform-ecs 
 
 ## How to Use Locally
 * Clone this repo
