@@ -3,6 +3,10 @@
 * Ref: https://www.educative.io/courses/the-way-to-go
 * IaC (terraform) taken from https://github.com/KevinSeghetti/aws-terraform-ecs 
 
+## Enhancements
+* Enhancements compared to https://github.com/riyadhctg/url_shortenner
+   * Channel is used to support concurrent requests  
+
 ## How to Use Locally
 * Clone this repo
 * go to the `app` directory
