@@ -1,8 +1,14 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"net/http"
+)
+
+var (
+	listenAddr = flag.String("http", ":4000", "http listen address")
+	dataFile   = flag.String("file", "store.gob", "data store file name")
 )
 
 const addForm = `
@@ -14,12 +20,14 @@ URL: <input type="text" name="url">
 </html></body>
 `
 
-var store = NewURLStore("store.gob")
+var store *URLStore
 
 func main() {
+	flag.Parse()
+	store = NewURLStore(*dataFile)
 	http.HandleFunc("/", Redirect)
 	http.HandleFunc("/add", Add)
-	http.ListenAndServe(":4000", nil)
+	http.ListenAndServe(*listenAddr, nil)
 }
 
 func Redirect(w http.ResponseWriter, r *http.Request) {
